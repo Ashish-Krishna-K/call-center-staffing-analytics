@@ -69,16 +69,6 @@ FROM
 GROUP BY
     date;
 
--- Call Volume by day of the week
-SELECT
-    day_of_week_num,
-    MIN(day_of_week) AS day_of_week,
-    COUNT(*) AS call_volume
-FROM
-    vw_call_records_enriched
-GROUP BY
-    day_of_week_num;
-
 -- Start hour, end hour and total hours for the day
 SELECT
     MIN(hour_of_day) AS start_hour,
@@ -107,6 +97,16 @@ FROM
 GROUP BY
     day_of_week_num,
     hour_of_day;
+
+-- Call Volume by day of the week
+SELECT
+    day_of_week_num,
+    MIN(day_of_week) AS day_of_week,
+    COUNT(*) AS call_volume
+FROM
+    vw_call_records_enriched
+GROUP BY
+    day_of_week_num;
 
 -- Average call volume by day of week
 WITH daily_calls AS (
