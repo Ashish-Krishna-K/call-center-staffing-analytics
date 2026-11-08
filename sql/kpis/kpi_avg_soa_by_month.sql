@@ -12,7 +12,14 @@ SELECT
     month_name,
     COUNT(*) AS answered_call_cnt,
     SUM(speed_of_answer) AS total_speed_of_answer_sec,
-    ROUND(AVG(speed_of_answer), 2) AS avg_speed_of_answer_sec
+    ROUND(AVG(speed_of_answer), 2) AS avg_speed_of_answer_sec,
+    ROUND(
+        SQRT(
+            (SUM(speed_of_answer * speed_of_answer)
+             - SUM(speed_of_answer) * SUM(speed_of_answer) / COUNT(*))
+            / (COUNT(*) - 1)
+        )
+    ) AS sd_avg_speed_of_answer_sec
 FROM
     vw_call_records_enriched
 WHERE
