@@ -19,7 +19,7 @@ SELECT
              - SUM(avg_talk_duration) * SUM(avg_talk_duration) / COUNT(*))
             / (COUNT(*) - 1)
         )
-    ) AS sd_aht_sec
+    , 2) AS sd_aht_sec
 FROM
     vw_call_records_enriched
 WHERE

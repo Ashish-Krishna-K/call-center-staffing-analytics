@@ -19,7 +19,7 @@ SELECT
              - SUM(speed_of_answer) * SUM(speed_of_answer) / COUNT(*))
             / (COUNT(*) - 1)
         )
-    ) AS sd_avg_speed_of_answer_sec
+    , 2) AS sd_avg_speed_of_answer_sec
 FROM
     vw_call_records_enriched
 WHERE

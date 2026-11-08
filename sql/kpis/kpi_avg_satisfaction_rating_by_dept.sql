@@ -17,7 +17,7 @@ SELECT
              - SUM(satisfaction_rating) * SUM(satisfaction_rating) / COUNT(*))
             / (COUNT(*) - 1)
         )
-    ) AS sd_avg_satisfaction_rating
+    , 2) AS sd_avg_satisfaction_rating
 FROM
     vw_call_records_enriched
 WHERE
