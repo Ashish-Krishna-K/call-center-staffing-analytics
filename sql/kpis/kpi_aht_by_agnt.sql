@@ -12,7 +12,14 @@
 SELECT
     agent,
     COUNT(*) AS answered_call_cnt,
-    ROUND(AVG(avg_talk_duration), 2) AS aht_sec
+    ROUND(AVG(avg_talk_duration), 2) AS aht_sec,
+    ROUND(
+        SQRT(
+            (SUM(avg_talk_duration * avg_talk_duration)
+             - SUM(avg_talk_duration) * SUM(avg_talk_duration) / COUNT(*))
+            / (COUNT(*) - 1)
+        )
+    ) AS sd_aht_sec
 FROM
     vw_call_records_enriched
 WHERE
