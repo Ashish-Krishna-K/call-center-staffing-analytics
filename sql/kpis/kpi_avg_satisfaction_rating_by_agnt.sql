@@ -10,14 +10,7 @@
 SELECT
     agent,
     COUNT(*) AS answered_call_cnt,
-    ROUND(AVG(satisfaction_rating), 2) AS avg_satisfaction_rating,
-    ROUND(
-        SQRT(
-            (SUM(satisfaction_rating * satisfaction_rating)
-             - SUM(satisfaction_rating) * SUM(satisfaction_rating) / COUNT(*))
-            / (COUNT(*) - 1)
-        )
-    , 2) AS sd_avg_satisfaction_rating
+    ROUND(AVG(satisfaction_rating), 2) AS avg_satisfaction_rating
 FROM
     vw_call_records_enriched
 WHERE
