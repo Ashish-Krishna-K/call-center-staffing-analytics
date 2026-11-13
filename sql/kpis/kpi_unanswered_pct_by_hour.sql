@@ -1,12 +1,13 @@
 -- KPI: Unanswered call % by hour of day
--- Purpose: Identify peak hours for unanswered calls 
+-- Purpose: Identify peak hours for unanswered calls
 --          (unanswered calls / total calls arriving in that hour).
 -- Source: vw_call_records_enriched (see 00_create_view.sql)
--- Output: Ordered chronologically by hour for direct plotting.
 -- Scope Note: The 18:00 hour is excluded. It contains only 14 calls across the
 --             entire dataset (vs. ~500–600 calls/hour during standard operational hours),
 --             indicating post-shift spillover rather than a fully staffed hour
 --             (see 02_exploratory_checks.ipynb).
+-- Output: Ordered chronologically by hour for direct plotting.
+
 SELECT
     hour_of_day,
     COUNT(*) FILTER(WHERE answered = 'no') AS unanswered_call_cnt,

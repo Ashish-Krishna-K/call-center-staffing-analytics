@@ -1,8 +1,9 @@
 -- KPI: Average satisfaction rating by agent
 -- Purpose: Compare the average satisfaction rating of each agent. Satisfaction rating
---          ranges from 1 (low) to 5 (high).
+--          ranges from 1 (low) to 5 (high). Calculated by dividing the sum of ratings
+--          by answered calls
 -- Source: vw_call_records_enriched (see 00_create_view.sql)
--- Scope Note: Includes all hours (including the 18:00 hour as the exclusion only 
+-- Scope Note: Includes all hours (including the 18:00 hour as the exclusion only
 --             applies to hourly KPIs).
 -- Output: Ordered alphabetically by agent so tables and charts can line up across
 --         metrics.

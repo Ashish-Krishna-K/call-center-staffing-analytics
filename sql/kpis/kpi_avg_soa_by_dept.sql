@@ -5,7 +5,7 @@
 -- Scope Note: Answered calls only (unanswered calls have no speed of answer).
 --             All dates included. Includes all hours, including the 18:00 hour,
 --             as the exclusion only applies to hourly KPIs.
--- Output: Ordered alphabetically by department so tables and charts can line up 
+-- Output: Ordered alphabetically by department so tables and charts can line up
 --         across metrics.
 
 SELECT

@@ -4,7 +4,7 @@
 --          AHT here is average talk durations only, as the dataset does not contain
 --          hold or after-call work.
 -- Source: vw_call_records_enriched (see 00_create_view.sql)
--- Scope Note: Includes all hours (including the 18:00 hour as the exclusion only 
+-- Scope Note: Includes all hours (including the 18:00 hour as the exclusion only
 --             applies to hourly KPIs).
 -- Output: Ordered alphabetically by agent so tables and charts can line up across
 --         metrics.
