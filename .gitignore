@@ -224,4 +224,8 @@ __pycache__/
 .ipynb_checkpoints/
 *.db
 .env
-data/database
+data/database/*
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
