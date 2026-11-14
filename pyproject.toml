@@ -1,7 +1,7 @@
 [project]
 name = "call-center-staffing-analytics"
 version = "0.1.0"
-description = "Add your description here"
+description = "Descriptive analysis of unanswered calls in a call center dataset."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -9,4 +9,9 @@ dependencies = [
     "openpyxl>=3.1.5",
     "pandas>=3.0.6",
     "sqlparse>=0.6.0",
+]
+
+[dependency-groups]
+dev = [
+    "jupyterlab>=4.6.6",
 ]
