@@ -1,6 +1,6 @@
 # Call Center Staffing Analytics
 
-A descriptive analysis of why calls go unanswered in a call center dataset (5,000 calls, January to March 2015). The project cleans the raw data with Python, derives 12 KPIs with SQL (SQLite), and will present the findings in a Power BI dashboard.
+A descriptive analysis of why calls go unanswered in a call center dataset (5,000 calls, January to March 2015). The project cleans the raw data with Python, derives 12 KPIs with SQL (SQLite), and presents the findings in the README.
 
 ## Problem Statement
 
@@ -40,7 +40,6 @@ A descriptive analysis of why calls go unanswered in a call center dataset (5,00
 3. **View** (`sql/00_create_view.sql`): `vw_call_records_enriched` adds month, day of week and hour of day to every call.
 4. **KPIs** (`sql/kpis/`): one SQL file per KPI, 12 in total.
 5. **Analyse** (`notebooks/03_kpi_analysis.ipynb`): run the queries, reconcile them against each other, chart each KPI against its overall figure, and write the observations and findings.
-6. **Dashboard** (`dashboard/`): in progress.
 
 | Metric | Cut by |
 |---|---|
@@ -70,17 +69,12 @@ Before charting, the notebook checks that the queries agree with each other (row
 - The data covers one quarter (5,000 calls) and has no staffing or schedule information, so it cannot show whether demand outstrips staffing at certain times.
 - The analysis is descriptive. Small gaps between groups may be normal variation and are not treated as findings.
 
-## Dashboard
-
-*In progress.* A Power BI dashboard built from the cleaned CSV will be added here, with screenshots and a short demo.
-
 ## Tech Stack
 
 - **Python**: pandas, matplotlib, sqlparse
 - **SQL**: SQLite (queries run through Python's `sqlite3`)
 - **Notebooks**: JupyterLab
 - **Environment**: uv
-- **Dashboard**: Power BI (planned)
 
 ## Repository Structure
 
@@ -100,16 +94,13 @@ call-center-staffing-analytics/
 │   ├── 02_sensitivity_checks.sql
 │   └── kpis/           # one file per KPI (12)
 ├── reports/
-│   ├── charts/
-│   └── dashboard_gifs/
-├── dashboard/
+│   └── charts/
 ├── pyproject.toml
 └── README.md
 ```
 
 ## Future Plans
 
-- Finish and publish the Power BI dashboard.
 - Repeat the analysis on data that includes staffing or schedule information, so the coverage question can be tested directly.
 - Look at arrivals in shorter intervals (for example, half-hours) to find peaks within an hour.
 - Add a service-level measure (share of calls answered within a target time) once a target is defined.
