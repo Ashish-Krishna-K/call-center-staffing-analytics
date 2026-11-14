@@ -5,8 +5,9 @@
 -- Scope Note: Answered calls only (unanswered calls have no speed of answer).
 --             All dates included. The 18:00 hour is excluded: it contains only
 --             14 calls across the entire dataset (vs. ~500-600 calls/hour
---             during standard hours), which looks like post-shift spillover
---             rather than a fully staffed hour (see 02_exploratory_checks.ipynb).
+--             during standard operational hours), which looks like post-shift 
+--             spillover rather than a fully staffed hour 
+--             (see 02_exploratory_checks.ipynb).
 -- Output: Ordered chronologically by hour for direct plotting.
 
 SELECT
