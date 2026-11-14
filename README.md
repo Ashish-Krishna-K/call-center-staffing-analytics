@@ -14,7 +14,7 @@ A descriptive analysis of why calls go unanswered in a call center dataset (5,00
 
 ## Dataset
 
-- **Source**: "Call Center Dataset" by maryamabdelgwad on [Kaggle](ADD-LINK). See the dataset page for its license.
+- **Source**: "Call Center Dataset" by maryamabdelgwad on [Kaggle](https://www.kaggle.com/datasets/maryamabdelgwad/call-center-dataset). See the dataset page for its license.
 - **Size and period**: 5,000 call records from 2015-01-01 to 2015-03-31 (appliance support).
 - **Columns**: `call_id`, `date`, `time`, `agent`, `department`, `answered` (yes/no), `resolved`, `speed_of_answer` (seconds), `avg_talk_duration` (seconds), `satisfaction_rating` (1 to 5).
 - **Provenance**: It is not clear from the dataset page whether the records are real or generated, so the results describe this dataset only and should not be read as describing any real call center.
@@ -121,12 +121,12 @@ call-center-staffing-analytics/
 1. Clone the repository and install the dependencies:
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/call-center-staffing-analytics.git
+   git clone https://github.com/Ashish-Krishna-K/call-center-staffing-analytics.git
    cd call-center-staffing-analytics
    uv sync
    ```
 
-2. Download the dataset from [Kaggle](ADD-LINK) and place the CSV in `data/raw/`.
+2. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/maryamabdelgwad/call-center-dataset) and place the CSV in `data/raw/`.
 
 3. Start JupyterLab:
 
